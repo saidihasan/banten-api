@@ -3,12 +3,14 @@
 var response = require('./res');
 var connection = require('./db_con');
 
-exports.users = function(req, res) {
-    connection.query('SELECT * FROM person', function (error, rows, fields){
+exports.getAllNews = function(req, res) {
+    connection.query('SELECT * FROM csvtojson', function (error, rows, fields){
         if(error){
             console.log(error)
         } else{
             response.ok(rows, res)
+
+            console.log(rows[0].DATE);
         }
     });
 };

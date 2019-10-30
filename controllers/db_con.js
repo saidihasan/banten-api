@@ -3,8 +3,9 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "$abniFamily1",
-  database: "banten_db"
+  // password: "$abniFamily1", in ubuntu
+  password : "",
+  database: "media_dev"
 });
 
 con.connect(function (err){
